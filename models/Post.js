@@ -3,7 +3,7 @@ const { model, Schema } = require('mongoose')
 const postSchema = new Schema({
   body: {
     title: String,
-    adderss: String,
+    address: String,
     comment: String,
     image: String,
   },

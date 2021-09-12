@@ -13,7 +13,7 @@ module.exports = gql`
   }
   type Body {
     title: String!,
-    adderss: String!,
+    address: String!,
     comment: String!,
     image: String!,
   }
@@ -45,9 +45,9 @@ module.exports = gql`
     username: String!
     password: String!
   }
-  input createPostInput {
+  input CreatePostInput {
     title: String!,
-    adderss: String!,
+    address: String!,
     comment: String!,
     image: String!,
   }
@@ -58,7 +58,7 @@ module.exports = gql`
   type Mutation {
     register(registerInput: RegisterInput): User!
     login(loginInput: LoginInput): User!
-    createPost(body: createPostInput): Post!
+    createPost(createPostInput: CreatePostInput): Post!
     deletePost(postId: ID!): String!
     createComment(postId: String!, body: String): Post!
     deleteComment(postId: ID!, commentId: ID!): Post!

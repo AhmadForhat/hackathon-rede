@@ -15,7 +15,7 @@ module.exports = {
     getPost: (_, { postId }) => getPostController(postId),
   },
   Mutation: {
-    createPost: (_, { body }, context)  => createPostController(body, context, pubsub),
+    createPost: (_, { createPostInput: body }, context)  => createPostController(body, context, pubsub),
     deletePost: (_, { postId }, context) => deletePostController(postId, context)
   },
   Subscription: {
